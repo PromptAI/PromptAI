@@ -1,0 +1,26 @@
+# Custom Open Source License
+
+PromptAI is licensed under a modified version of the Apache License 2.0, with the following additional conditions:
+
+### 1. Commercial Use Restrictions
+You may use PromptAI for commercial purposes, including as a backend service or application development platform. However, the following restrictions apply:
+
+#### a. No Multi-Tenant or Platform Use
+- You may not use PromptAI to operate a multi-tenant environment or as a platform for third-party applications.
+- **Definition**: A "multi-tenant environment" refers to any setup where multiple independent users or organizations share the same instance of the software with isolated data and configurations.
+- **Platform Use**: You may not offer PromptAI as a hosted service or integrate it into a larger commercial platform for third-party users.
+
+#### b. Branding and Copyright Information
+- You may not remove, modify, or obscure the **logo, branding, or copyright information** of PromptAI in the frontend interface.
+- **Frontend Definition**: The "frontend" refers to any official UI components provided for PromptAI, even if hosted in a separate repository.
+- This restriction does not apply if you are only using the backend components without modifications to the frontend.
+
+### 2. Contributor Agreement
+By contributing to this project, you agree that:
+- The project maintainers may adjust the license terms in the future, either to be more permissive or restrictive.
+- Your contributed code may be used for both open-source and commercial purposes, including but not limited to cloud-based services and enterprise solutions.
+
+### 3. General Terms
+- Apart from the specific conditions mentioned above, all other rights and restrictions follow the **Apache License 2.0**.
+- The full Apache License 2.0 text can be found at: [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
+

@@ -1,0 +1,10 @@
+apply plugin: 'org.springframework.boot'
+dependencies {
+    implementation project(':common')
+}
+
+bootJar {
+    archiveFileName = "promptai-broker-2.0.jar"
+}
+
+description = 'Broker Service'

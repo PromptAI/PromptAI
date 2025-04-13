@@ -1,0 +1,24 @@
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 9999
+
+management:
+  endpoint:
+    prometheus:
+      enabled: true
+
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+
+public.url: http://127.0.0.1:${server.port}

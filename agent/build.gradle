@@ -1,0 +1,9 @@
+apply plugin: 'org.springframework.boot'
+dependencies {
+    implementation project(':common')
+    api fileTree(include: ['*.jar', 'lib'], dir: "lib")
+}
+
+bootJar {
+    archiveFileName = "promptai-agent-2.0.jar"
+}

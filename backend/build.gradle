@@ -1,0 +1,46 @@
+//所有子模块都是springboot项目，如不是，不能打包。
+apply plugin: 'org.springframework.boot'
+dependencies {
+    implementation project(':common')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation 'com.fasterxml.jackson.core:jackson-core'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations'
+
+    /* jwt */
+    implementation 'com.auth0:java-jwt:3.4.0'
+
+    /* tencent SMS */
+    implementation 'com.tencentcloudapi:tencentcloud-sdk-java-sms:3.1.1179'
+
+    implementation 'com.maxmind.geoip2:geoip2:3.0.1'
+
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.3'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.3'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.3'
+    implementation 'io.jsonwebtoken:jjwt:0.7.0'
+
+
+    /* oauth */
+    implementation 'com.google.api-client:google-api-client:2.3.0'
+
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.3.2'
+    implementation 'org.apache.tomcat:tomcat-jdbc:10.1.18'
+    implementation 'jakarta.ws.rs:jakarta.ws.rs-api:3.1.0'
+    implementation 'com.mysql:mysql-connector-j:8.3.0'
+
+    // 替换 javax.mail 为 jakarta.mail
+    implementation 'org.eclipse.angus:jakarta.mail:2.0.2'
+}
+
+
+bootJar {
+    archiveFileName = "promptai-backend-2.0.jar"
+}
+
+description = 'backend Service'

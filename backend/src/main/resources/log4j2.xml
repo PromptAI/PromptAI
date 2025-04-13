@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://logging.apache.org/log4j/2.x/manual/layouts.html -->
+<Configuration status="WARN">
+    <properties>
+        <property name="LOG_HOME">logs</property>
+        <property name="FILE_NAME">backend</property>
+        <property name="log.sql.level">info</property>
+    </properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{MM-dd HH:mm:ss.SSS.Z} [%-5level][%X{trace_id}][%t][%c{1.}.%M:%L]%msg%n" />
+        </Console>
+        <RollingFile name="RollingFileName" append="true" fileName="${LOG_HOME}/${FILE_NAME}.log" filePattern="${LOG_HOME}/${FILE_NAME}-%i.log.gz">
+            <PatternLayout pattern="%d{MM-dd HH:mm:ss.SSS.Z} [%-5level][%X{trace_id}][%t][%c{1.}.%M:%L]%msg%n" />
+            <Policies>
+                <SizeBasedTriggeringPolicy size="100MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="15"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="RollingFileName" />
+        </Root>
+
+    </Loggers>
+</Configuration>

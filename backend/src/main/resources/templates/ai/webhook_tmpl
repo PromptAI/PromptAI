@@ -1,0 +1,89 @@
+def py_baidu(**kwargs):         // 函数名和function name保持一致
+    url = "https://www.baidu.com"
+    label = "${label}"          // 为空的时候这里应该是 ""
+    headers = {}                // 为空的时候这里应该是 {}
+    params = {}                 // 为空的时候这里应该是 {}
+    text = "${requestBodyText}" // 为空的时候这里应该是 ""
+    request_type = "get"
+    request_body_type = "none"
+
+    response_type = "direct"    // "direct" / "not" / "mapping" 三种值
+    response_handle = {"error_msg":"failed to Request page","parse":[]}
+    default_error_msg = "failed to Request page"
+
+    import requests
+    import json
+    import jsonpath
+    from llmChatbot.event import BotUtter, SetSlot
+
+    def request(url, params):
+        response = None
+        try:
+            if request_body_type == "application/json":
+                response = requests.request(request_type, url, data=json.dumps(params), headers=headers)
+            else:
+                response = requests.request(request_type, url, data=params, headers=headers)
+        except Exception as e:
+            print("Fail to get response from webhook. ", e)
+        return response
+
+    def __interpolator_text(response, states):
+        import re
+        try:
+            text = re.sub(r"{([^\n{}]+?)}", r"{0[\1]}", response)
+            text = text.format(states)
+            if "0[" in text:
+                # regex replaced tag but format did not replace
+                # likely cause would be that tag name was enclosed
+                # in double curly and format func simply escaped it.
+                # we don't want to return {0[SLOTNAME]} thus
+                # restoring original value with { being escaped.
+                return response.format({})
+            return text
+        except Exception as e:
+            print("cannot find states", e)
+            return response
+
+    def parse(json_dict, value):
+        return jsonpath.jsonpath(json_dict, value)
+
+    if request_body_type == "text/plain":
+        text = __interpolator_text(text, kwargs)
+
+    if request_body_type == "text/plain":
+        response = request(url, text)
+    else:
+        response = request(url, params)
+    result = []
+    # 处理response
+    if response is None or (response is not None and response.status_code >= 400):
+        if response_handle is not None:
+            result.append(BotUtter(response_handle.get("error_msg")))
+        else:
+            result.append(BotUtter(default_error_msg))
+
+
+    if response_type == "direct":
+        result.append(BotUtter(response.text))
+        return result
+
+    if response_type == "not":
+        return []
+
+    if response_handle is not None:
+        if response is not None and response.status_code == 200:
+            text = response_handle.get("text")
+            for key, value in response_handle.get("parse").items():
+                mapping = parse(response.json(), value)
+                if not mapping:
+                    result.append(BotUtter(response_handle.get("error_msg")))
+                    break
+                if len(mapping) == 0:
+                    continue
+                if len(mapping) == 1:
+                    result.append(SetSlot(key, mapping[0]))
+                else:
+                    result.append(SetSlot(key, mapping))
+            result.append(BotUtter(text))
+
+        return result
