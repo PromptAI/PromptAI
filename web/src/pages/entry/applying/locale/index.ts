@@ -1,0 +1,46 @@
+const i18n = {
+  'en-US': {
+    'applying.form.title': 'Apply For Your Register Code',
+    'applying.form.sub': 'APPLICATION INFORMATION',
+    'applying.form.name.placeholder': 'Name',
+    'applying.form.name.errMsg': 'Name cannot be empty',
+    'applying.form.phone.placeholder': 'Phone',
+    'applying.form.phone.required': 'Phone number, Email at least one entry is not empty',
+    'applying.form.phone.errMsg':
+      'Please fill in the correct mobile phone number in Chinese Mainland!',
+    'applying.form.email.placeholder': 'Email',
+    'applying.form.email.required': 'Email, Phone number at least one entry is not empty,',
+    'applying.form.email.errMsg': 'Please fill in the correct email address',
+    'applying.form.useScene.placeholder': 'Application Scenario',
+    'applying.submit': 'Apply for',
+    'applying.form.success': 'Send Successful',
+    'applying.form.message': 'Later we will send the registration code to you by SMS or email',
+    'applying.applyingFor.placeholder': 'Already have a registration code or account?',
+    'applying.applyingFor.concat': ' or ',
+    'applying.applyingFor.signIn': 'Sign in',
+    'applying.applyingFor.register': 'Register',
+  },
+  'zh-CN': {
+    'applying.form.title': '申请注册码',
+    'applying.form.sub': '申请信息',
+    'applying.form.name.placeholder': '姓名',
+    'applying.form.name.errMsg': '姓名不能为空',
+    'applying.form.phone.placeholder': '电话号码',
+    'applying.form.phone.required': '邮箱、电话号码至少一项不为空',
+    'applying.form.phone.errMsg':
+      '请填写正确的中国大陆地区手机号',
+    'applying.form.email.placeholder': '邮箱',
+    'applying.form.email.required': '邮箱、电话号码至少一项不为空',
+    'applying.form.email.errMsg': '请填写正确的电子邮箱地址',
+    'applying.form.useScene.placeholder': '应用场景',
+    'applying.submit': '申请注册码',
+    'applying.form.success': '发送成功',
+    'applying.form.message': '稍后我们将通过短信或电子邮件发送注册码给您',
+    'applying.applyingFor.placeholder': '已有注册码或帐号?',
+    'applying.applyingFor.concat': '或',
+    'applying.applyingFor.signIn': '登录',
+    'applying.applyingFor.register': '注册',
+  },
+};
+
+export default i18n;

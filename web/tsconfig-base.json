@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    // "rootDirs": ["./src", "../arco-design-pro-next/src"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@pcom/*": ["src/pages/projects/project/components/*"]
+    }
+  }
+}

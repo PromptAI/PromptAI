@@ -1,0 +1,12 @@
+.drop-node {
+  padding: 2px;
+  border: 2px dashed transparent;
+}
+
+.drop-node-anchor {
+  border: 2px dashed rgb(var(--primary-6));
+}
+
+.drop-node-in {
+  border: 2px dashed rgb(var(--success-6));
+}

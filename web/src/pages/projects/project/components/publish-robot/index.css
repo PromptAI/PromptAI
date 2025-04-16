@@ -1,0 +1,28 @@
+.publish-robot-move {
+  right: 48px;
+  bottom: 24px;
+  width: 0;
+}
+
+.publish-robot-container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.publish-robot-hidden {
+  display: none;
+}
+
+.publish-robot-right {
+  margin-bottom: 8px;
+  margin-right: -24px;
+}
+
+.publish-robot-trigger {
+  width: 54px !important;
+  height: 54px !important;
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+}

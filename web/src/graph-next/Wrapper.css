@@ -1,0 +1,13 @@
+.node {
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+.node:hover {
+  border-color: rgb(var(--primary-6));
+}
+.node-selected {
+  border-color: rgb(var(--primary-6));
+}
+.node-error {
+  border-color: red;
+}

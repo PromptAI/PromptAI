@@ -1,0 +1,7 @@
+.overview-graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-right: 64px;
+}

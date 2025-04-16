@@ -1,0 +1,18 @@
+FROM  node:16.14.2
+
+ARG BASE_PATH=/app
+
+USER root
+RUN npm install -g pnpm
+
+RUN mkdir -p ${BASE_PATH}
+WORKDIR ${BASE_PATH}
+ADD . ${BASE_PATH}
+
+RUN pnpm install
+
+RUN ./scripts/build.sh
+
+EXPOSE 3123
+
+CMD [ "pnpm", "run", "start:docker" ]

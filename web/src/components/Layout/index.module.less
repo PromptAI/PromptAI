@@ -1,0 +1,125 @@
+.com-layout {
+  height: 100%;
+}
+.com-layout-header {
+  height: 47px;
+  background: var(--color-bg-2);
+  border-bottom: 1px solid rgb(var(--gray-2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+.com-layout-main {
+  display: flex;
+}
+.com-layout-sider {
+  height: 100%;
+  overflow: auto;
+  width: 220px;
+  .com-layout-menu-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .com-layout-sider-footer {
+      width: 100%;
+      text-align: center;
+      padding-top: 16px;
+      padding-bottom: 8px;
+      & > a {
+        color: var(--color-text-2);
+        font-weight: 600;
+        text-decoration: none;
+        &:hover {
+          color: rgb(var(--primary-6));
+        }
+      }
+    }
+  }
+  svg {
+    font-size: 18px;
+  }
+}
+.com-layout-frame {
+  flex: 1;
+  overflow: auto;
+}
+.com-layout-v-frame {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+}
+.com-layout-content {
+  display: flex;
+  height: calc(100vh - 100px);
+}
+.com-layout-collapse-btn {
+  position: fixed;
+  bottom: 8px;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  width: 48px;
+}
+.dynamic-menu {
+  :global {
+    .arco-menu-inline-header {
+      .arco-icon {
+        margin-right: 10px;
+      }
+    }
+  }
+  .dynamic-menu-item {
+    padding-left: 28px;
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    .dynamic-menu-item-more {
+      display: none;
+      border-radius: 2px;
+      background: var(--color-fill-3);
+      padding: 2px;
+      color: rgb(var(--primary-6)) !important;
+    }
+    &:hover .dynamic-menu-item-more {
+      display: block;
+    }
+    .dynamic-menu-item-icon {
+      width: max-content;
+      display: flex;
+      align-items: center;
+    }
+    .dynamic-menu-item-text {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &> span {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    &> svg {
+      margin: 0 !important;
+    }
+  }
+  .dynamic-menu-item-pl {
+    padding-left: 28px;
+  }
+}
+.breadcrumbs-icon {
+  color: var(--color-text-1);
+  display: flex;
+  align-items: center;
+  gap: 8px
+}
+.breadcrumbs-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-text-1);
+  max-width: 220px;
+}

@@ -1,0 +1,200 @@
+.entryLogo {
+  display: block;
+  padding: 0 32px;
+  height: 72px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  .entryLogoWrapper {
+    padding: 4px;
+    background: white;
+    border-radius: 4px;
+    display: flex;
+  }
+
+  color: white;
+  span {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 24px;
+  }
+  i {
+    font-size: 12px;
+    margin-left: -14px;
+    margin-bottom: -8px;
+  }
+
+  @media screen and (max-width: 640px) {
+    & span,
+    i {
+      display: none;
+    }
+  }
+}
+.entryNav {
+  padding: 0 32px;
+  line-height: 72px;
+  height: 72px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  color: white;
+  a {
+    color: white;
+    font-size: 16px;
+  }
+}
+.entryBackground {
+  height: calc(var(--app-view-height));
+  background: linear-gradient(
+    163.85deg,
+    rgb(var(--gray-10)) 0%,
+    rgb(var(--primary-8)) 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+
+  .main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .entryBox {
+    margin-top: -40px;
+    width: 400px;
+    min-height: 450px;
+    &.entryBoxRegister {
+      min-height: 600px;
+    }
+
+    @media screen and (max-width: 640px) {
+      & {
+        width: calc(100vw - 64px);
+        max-width: 400px;
+      }
+    }
+    .entryTitle {
+      color: white;
+      white-space: nowrap;
+      text-align: center;
+      font-weight: bold;
+      margin-right: -10px;
+      margin-left: -10px;
+    }
+    .entryFormContainer {
+      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    }
+    .entryTypes {
+      color: rgb(var(--blue-10));
+      display: flex;
+      padding-top: 1px;
+
+      & > div {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        padding: 15px 0;
+        text-align: center;
+        background: rgba(204, 204, 204, 0.9);
+        box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+        margin-top: 5px;
+        &:first-child {
+          box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+        }
+        &:last-child {
+          box-shadow: inset 2px -2px 4px rgba(0, 0, 0, 0.2);
+        }
+        &.selected {
+          margin-top: 0px;
+          border-top: 5px solid rgb(var(--primary-6));
+          box-shadow: none;
+          background: white;
+          color: rgb(var(--primary-7));
+          font-weight: bold;
+        }
+        & > span {
+          opacity: 0.8;
+        }
+        & > svg {
+          font-size: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .entryBody {
+      padding: 30px 20px;
+      background: white;
+    }
+  }
+}
+
+.login-form {
+  &-wrapper {
+    width: 320px;
+  }
+
+  &-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--color-text-1);
+    line-height: 32px;
+  }
+
+  &-sub-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-text-3);
+  }
+
+  &-error-msg {
+    height: 32px;
+    line-height: 32px;
+    color: rgb(var(--red-6));
+  }
+
+  &-password-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-register-btn {
+    color: var(--color-text-3) !important;
+  }
+}
+
+.contactUs {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  span {
+    display: block;
+    width: 100px;
+    text-align: center;
+    color: white;
+  }
+  div {
+    line-height: 0;
+    font-size: 0;
+    background: white;
+    margin-bottom: 10px;
+    padding: 3px 3px 0 3px;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}

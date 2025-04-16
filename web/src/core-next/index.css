@@ -1,0 +1,194 @@
+.mind-graph {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg-2);
+}
+
+.mind-graph-canvas-over {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mind-graph-canvas {
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  cursor: grab
+}
+
+.mind-graph-node {
+  display: flex;
+  align-items: center;
+  height: max-content;
+  gap: 80px;
+  border: 1px solid transparent;
+  width: max-content;
+}
+
+.mind-graph-node-inner {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.mind-graph-node-wrapper {
+  border: 2px dashed transparent;
+  display: flex;
+  align-items: center;
+}
+
+.mind-graph-node-wrapper.dragging-node .mind-graph-link {
+  opacity: 0;
+}
+
+.mind-node-hover:hover {
+  border-style: dashed;
+  border-color: rgb(var(--primary-6));
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.mind-graph-node-wrapper-expand-controller {
+  margin-left: 5px;
+}
+
+.mind-graph-node-wrapper-focus {
+  border-style: dashed;
+  border-radius: 0.375rem;
+  border-color: rgb(var(--primary-6));
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.mind-graph-node-children {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.mind-graph-node-sub-children {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 0px;
+  padding-left: 45px;
+  margin-left: -45px;
+  border: 2px dashed green;
+  border-radius: 20px;
+  padding-right: 3.5rem;
+}
+
+.mind-graph-link {
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.mind-graph-toolbar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem;
+  background: var(--color-bg-3);
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0px -2px 4px -1px rgb(0 0 0 / 6%);
+  border-top-width: 1px;
+  border-color: rgba(243, 244, 246);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.mind-graph-toolbar-action {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text-2);
+  cursor: pointer;
+}
+
+.mind-graph-toolbar-action:hover {
+  color: rgba(3, 155, 229);
+}
+
+.mind-graph-toolbar-action-icon {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  fill: currentColor;
+}
+
+.mind-graph-toolbar-action-text {
+  color: var(--color-text-2);
+  ;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-align: center;
+  user-select: none;
+  font-weight: 700;
+}
+
+.mind-graph-toolbar-divider {
+  fill: currentColor;
+  color: var(--color-text-3);
+}
+
+.mind-graph-toolbar-zoom {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.mind-graph-children {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mind-graph-default-link {
+  fill: transparent;
+  stroke: currentColor;
+  color: rgb(var(--gray-5));
+  stroke-width: 2;
+}
+
+.mind-graph-default-link:hover {
+  color: rgba(3, 155, 229)
+}
+
+.mind-graph-default-node {
+  padding: 0.5rem 1rem;
+  height: 3rem;
+  width: 6rem;
+  background-color: rgba(255, 255, 255);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 700;
+  border-width: 1px;
+  border-color: rgba(52, 211, 153);
+  border-radius: 0.125rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.mind-graph-default-node-text {
+  font-size: 1.25rem;
+  line-height: 1;
+  text-align: center;
+  color: rgba(16, 185, 129);
+  font-weight: 700;
+}

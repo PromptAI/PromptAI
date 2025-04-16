@@ -1,0 +1,41 @@
+const i18n = {
+  'en-US': {
+    'rules.checkEmty': '请检查对话流程',
+    'rules.checkNextNode': '对话流程至少需要一个后续节点',
+    'rules.checkUserInput': '请检查用户输入',
+    'rules.checkUserNextBot': '用户输入需要对应至少一个机器回复或者表单',
+    'rules.checkUserOption': '请检查用户选项',
+    'rules.checkUserOprionNextBot': '用户选项需要对应至少一个机器回复或者表单',
+    'rules.checkBot': '请检查机器回复',
+    'rules.checkForm': '请检查信息收集',
+    'rules.checkSlotEmpty': '信息列表至少需要一个信息',
+    'rules.checkFieldEmtpy': '信息收集需要完整定义',
+    'rules.checkRhetoricalEmpty': '信息收集缺失询问需要完整定义',
+    'rules.checkRhetoricalNextNode':
+      '信息收集缺失询问后，至少需要定义一个用户输入',
+    'rules.checkConfirmNextBot': '收集完成后确认至少需要一个机器回复',
+    'rules.checkBreakEmpty': '请检查跳出表单',
+    'rules.checkConditionEmpty': '请检查跳出表单锚点',
+    'rules.checkConditionNextBot': '跳出表单锚点后至少需要一个机器回复',
+  },
+  'zh-CN': {
+    'rules.checkEmty': '请检查对话流程',
+    'rules.checkNextNode': '对话流程至少需要一个后续节点',
+    'rules.checkUserInput': '请检查用户输入',
+    'rules.checkUserNextBot': '用户输入需要对应至少一个机器回复或者表单',
+    'rules.checkUserOption': '请检查用户选项',
+    'rules.checkUserOprionNextBot': '用户选项需要对应至少一个机器回复或者表单',
+    'rules.checkBot': '请检查机器回复',
+    'rules.checkForm': '请检查信息收集',
+    'rules.checkSlotEmpty': '信息列表至少需要一个信息',
+    'rules.checkFieldEmtpy': '信息收集需要完整定义',
+    'rules.checkRhetoricalEmpty': '信息收集缺失询问需要完整定义',
+    'rules.checkRhetoricalNextNode':
+      '信息收集缺失询问后，至少需要定义一个用户输入',
+    'rules.checkConfirmNextBot': '收集完成后确认至少需要一个机器回复',
+    'rules.checkBreakEmpty': '请检查跳出表单',
+    'rules.checkConditionEmpty': '请检查跳出表单锚点',
+    'rules.checkConditionNextBot': '跳出表单锚点后至少需要一个机器回复',
+  },
+};
+export default i18n;

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ava/static/css/main.7de15026.css",
+    "main.js": "/ava/static/js/main.cc60b5c8.js",
+    "index.html": "/ava/index.html",
+    "main.7de15026.css.map": "/ava/static/css/main.7de15026.css.map",
+    "main.cc60b5c8.js.map": "/ava/static/js/main.cc60b5c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7de15026.css",
+    "static/js/main.cc60b5c8.js"
+  ]
+}

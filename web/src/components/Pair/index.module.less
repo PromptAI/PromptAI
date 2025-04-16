@@ -1,0 +1,58 @@
+.pairsContainer {
+  .container {
+    .reversed {
+      flex-direction: row-reverse;
+    }
+    .labelContainer {
+      display: flex;
+      align-items: center;
+      padding-left: 24px;
+      .pairLabelLeft {
+        flex: 1;
+        margin-bottom: 4px;
+      }
+      .pairLabelRight {
+        flex: 1;
+        margin-bottom: 4px;
+      }
+    }
+    .pairContainer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .hidden {
+        visibility: hidden;
+      }
+      .add {
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        color: rgb(var(--primary-3));
+        cursor: pointer;
+        margin-right: 8px;
+        &:hover {
+          color: rgb(var(--primary-4));
+        }
+      }
+      .minus {
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        color: rgb(var(--danger-3));
+        cursor: pointer;
+        margin-left: 8px;
+        &:hover {
+          color: rgb(var(--danger-4));
+        }
+      }
+      .pairItem {
+        flex: 1;
+        margin-bottom: 4px;
+      }
+      .pairSpliter {
+        margin: 0 8px;
+        font-weight: bold;
+      }
+    }
+  }
+}

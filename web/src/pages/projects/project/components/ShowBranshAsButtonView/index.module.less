@@ -1,0 +1,48 @@
+.Container {
+  border: 1px solid rgb(var(--gray-2));
+  padding: 8px;
+  background-color: var(--color-bg-1);
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .Robot {
+    min-height: 0;
+    flex: 1;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 16px;
+    display: flex;
+    .RobotHeader {
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      height: 30px;
+      &> img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        margin-right: 4px;
+      }
+    }
+    .RobotContentContainer {
+      flex: 1;
+      &> h5 {
+        margin: 0;
+      }
+      .RobotContent {
+        background-color: var(--color-fill-1);
+        padding: 8px;
+        max-width: fit-content;
+        border-radius: 4px;
+        .RobotContentButtons {
+          margin-top: 4px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+      }
+    }
+  }
+}

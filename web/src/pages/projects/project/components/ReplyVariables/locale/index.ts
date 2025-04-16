@@ -1,0 +1,46 @@
+const i18n = {
+  'en-US': {
+    'table.reply': 'Reply',
+    'table.operation': 'operations',
+    'table.operation.delete.title': 'Are you sure want to delete ?',
+    'table.operation.delete.variables':
+      'Are you sure you want to delete these slots?',
+    'table.operation.delete.variable.prefix':
+      'Are you sure you want to delete this ',
+    'table.operation.delete.variable.subfix': 'slot?',
+    'table.operation.delete.variable.value': 'The slot has the value',
+    'table.operation.delete.variables.value': 'These slots have values',
+    'message.error': 'Please complete the values in the list',
+    'trigger.title': 'Conditional Response',
+    'trigger.variable.title': 'Slot',
+    'trigger.variable.placehodler': 'Please select a slot',
+    'trigger.variable.add': 'Add a new line',
+    'message.error.notCompleted': 'At least one complete response is required',
+    'modal.title': 'Edit',
+    'modal.variable.value.placehodler': 'please enter',
+    'table.reply.count': 'Reply Count',
+    required: 'required',
+  },
+  'zh-CN': {
+    'table.reply': '回复',
+    'table.operation': '操作',
+    'table.operation.delete.title': '确定删除吗?',
+    'table.operation.delete.variables': '确定删除这些变量吗?',
+    'table.operation.delete.variable.prefix': '确定删除该',
+    'table.operation.delete.variable.subfix': '变量吗?',
+    'table.operation.delete.variable.value': '该变量存在值',
+    'table.operation.delete.variables.value': '这些变量存在值',
+    'message.error': '请完善列表中的值',
+    'trigger.title': '变量回复列表',
+    'trigger.variable.title': '变量',
+    'trigger.variable.placehodler': '请选择变量',
+    'trigger.variable.add': '新增一行',
+    'message.error.notCompleted': '至少需要一个完整的回复',
+    'modal.title': '编辑',
+    'modal.variable.value.placehodler': '请输入',
+    'table.reply.count': '回复数量',
+    required: '必填',
+  },
+};
+
+export default i18n;

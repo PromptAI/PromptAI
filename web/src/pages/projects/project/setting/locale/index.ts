@@ -1,0 +1,82 @@
+const i18n = {
+  'en-US': {
+    'project.create': 'Create Project',
+    'project.create.title': 'Create Project',
+    'project.update.title': 'Save',
+    'project.form.name': 'Name',
+    'project.form.locale': 'Language',
+    'project.form.description': 'Description',
+    'project.form.image': 'Cover',
+    'setting.title': 'Project Settings',
+    'project.form.welcome': 'Welcome Message',
+    'project.from.welcome.placeholder':
+      "Hello, I'm your smart assistant. What can I do for you?",
+    'project.form.Unknown': 'Fallback',
+    'project.form.Unknown.placeholder':
+      'Lame! We got a glitch, please try again later.',
+    'project.baseInfo': 'Essential Information',
+    'complex.form.welcome': 'Branch bot reply',
+    'complex.form.welcome.placeholder': 'Branch bot reply',
+    'complex.form.optional':
+      'Whether faq or flows are displayed as buttons below the first welcome message?',
+    'complex.form.optional.placeholder':
+      'Whether faq or flows are displayed as buttons below the first welcome message?',
+    'complex.form.optional.number':
+      'Number of presentations when rendered as a branch option',
+    'complex.form.optional.number.suffix': 'individual',
+    'complex.form.optional.none': 'Not Display',
+    'complex.form.optional.all': 'All',
+    'complex.form.optional.custom': 'Select',
+    'sample.form.blnNlpModel': 'FAQ Use LLM ?',
+    'sample.form.blnNlpModel.mutate': 'Change Reminder',
+    'sample.form.blnNlpModel.mutate.tip':
+      'Need to re-release/debug to take effect',
+    'sample.form.blnShowRelatedQuestions':
+      'When answering the FAQ, display other related questions.',
+    'sample.form.blnUseNlpAnswer':
+      'When answering the FAQ, use a large language model to generate answers (which may be different from the original answers).',
+    'sample.form.blnNlpModel.config': 'LLM',
+    'sample.form.useNlpModel': 'LLM',
+    'sample.form.LLM.faq': 'FAQ',
+    'sample.form.LLM.flow': 'Flow',
+    'sample.form.LLM.other.setting': 'FAQ other settings',
+  },
+  'zh-CN': {
+    'project.baseInfo': '基本信息',
+    'setting.title': '项目设置',
+    'project.create': '创建项目',
+    'project.create.title': '创建项目',
+    'project.update.title': '更新信息',
+    'project.form.name': '名称',
+    'project.form.locale': '语言',
+    'project.form.description': '描述',
+    'project.form.image': '显示图片',
+    'project.form.welcome': '欢迎语',
+    'project.from.welcome.placeholder':
+      '您好，我是您的智能助手，请问有什么需要我做的？',
+    'project.form.Unknown': '默认回复',
+    'project.form.Unknown.placeholder': '抱歉，我还在学习中，请换个问题试试。',
+    'complex.title': '对话流图',
+    'complex.form.welcome': '分支提示语',
+    'complex.form.welcome.placeholder': '分支提示语',
+    'complex.form.optional': '流程分支是否显示为按钮',
+    'complex.form.optional.placeholder': '作为分支选项呈现',
+    'complex.form.optional.number': '作为分支选项呈现时的展示数量',
+    'complex.form.optional.number.suffix': '个',
+    'complex.form.optional.none': '否',
+    'complex.form.optional.all': '全部',
+    'complex.form.optional.custom': '仅选中',
+    'sample.form.blnNlpModel': 'FAQ是否使用大语言模型',
+    'sample.form.blnNlpModel.mutate': '变更提示',
+    'sample.form.blnNlpModel.mutate.tip': '需要重新发布/调试后生效',
+    'sample.form.blnShowRelatedQuestions': '回答FAQ时，显示其他相关问题。',
+    'sample.form.blnUseNlpAnswer':
+      '回答FAQ时，使用大语言模型生成答案(跟原来的答案可能有差异)。',
+    'sample.form.blnNlpModel.config': '大语言模型',
+    'sample.form.useNlpModel': '使用大语言模型',
+    'sample.form.LLM.faq': '用户问答(FAQ)',
+    'sample.form.LLM.flow': '对话流图',
+    'sample.form.LLM.other.setting': '用户问答(FAQ)其它设置',
+  },
+};
+export default i18n;

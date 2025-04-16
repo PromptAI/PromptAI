@@ -1,0 +1,33 @@
+.virtual-node {
+  width: 200px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 2px dashed var(--color-neutral-3);
+}
+.virtual-node-drag-in {
+  border: 2px dashed rgb(var(--primary-6));
+}
+
+.drop-node {
+  padding: 4px;
+  border: 2px dashed transparent;
+}
+.drop-node-anchor {
+  border: 2px dashed rgb(var(--primary-6));
+}
+.drop-node-in {
+  border: 2px dashed rgb(var(--success-6));
+}
+
+.node-extra-intent-slot {
+  position: absolute;
+  top: 22px;
+}
+.node-extra-intent-template {
+  position: absolute;
+  top: -22px;
+}
+.node-extra-bot {
+  position: absolute;
+  top: -22px;
+}

@@ -1,0 +1,33 @@
+const i18n = {
+  'en-US': {
+    'component.icon-tooltip.plus': 'Add',
+    'component.icon-tooltip.check': 'Save',
+    'component.icon-tooltip.close': 'Close',
+    'component.icon-tooltip.thunderbolt': 'Choose',
+    'component.icon-tooltip.upload': 'Upload',
+    'component.icon-tooltip.common': 'Train',
+    'component.icon-tooltip.experiment': 'Test',
+    'component.icon-tooltip.playArrow': 'Run',
+    'component.icon-tooltip.save': 'Save',
+    'component.icon-tooltip.faq': 'Faq',
+    'component.icon-tooltip.more': 'More',
+    'component.icon-tooltip.dragdot': 'Move',
+    'component.icon-tooltip.star': 'Share',
+  },
+  'zh-CN': {
+    'component.icon-tooltip.plus': '新增',
+    'component.icon-tooltip.check': '保存',
+    'component.icon-tooltip.close': '关闭',
+    'component.icon-tooltip.thunderbolt': '选择',
+    'component.icon-tooltip.upload': '上传',
+    'component.icon-tooltip.common': '训练',
+    'component.icon-tooltip.experiment': '测试',
+    'component.icon-tooltip.playArrow': '运行',
+    'component.icon-tooltip.save': '保存',
+    'component.icon-tooltip.faq': '一问一答',
+    'component.icon-tooltip.more': '更多',
+    'component.icon-tooltip.dragdot': '移动',
+    'component.icon-tooltip.star': '共享',
+  },
+};
+export default i18n;

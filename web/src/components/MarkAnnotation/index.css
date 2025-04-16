@@ -1,0 +1,107 @@
+.mark-menu {
+  position: absolute;
+  background: var(--color-bg-4);
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  padding: 5px;
+}
+
+.mark-annotation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: var(--color-fill-2);
+  padding: 8px 16px 8px 16px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  --tip-color: transparent;
+}
+
+.mark-annotation-container-normal {
+  border: 2px solid lightblue;
+  --tip-color: lightblue;
+}
+
+.mark-annotation-container-success {
+  border: 2px solid lightgreen;
+  --tip-color: lightgreen;
+}
+
+.mark-annotation-container:before {
+  content: attr(data-tip);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--color-text-3);
+  background: var(--tip-color);
+  font-weight: bold;
+  font-size: 12px;
+  padding: 2px 2px;
+  border-radius: 2px;
+  line-height: 12px;
+}
+
+.mark-annotation {
+  flex: 1;
+  min-height: 36px;
+  padding-top: 4px;
+  font-size: 14px;
+  line-height: 32px;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+  color: var(--color-text-1);
+}
+
+.mark-annotation:empty::before {
+  content: attr(placeholder);
+  color: var(--color-text-3);
+}
+
+.mark-annotation-trigger {
+  height: max-content;
+}
+
+.mark-annotation-element {
+  display: inline;
+  color: rgb(var(--primary-6));
+  cursor: default;
+  border-radius: 4px;
+  border: 1px solid rgb(var(--primary-6));
+  line-height: 16px;
+  margin: 0 2px;
+  font-size: 13px;
+}
+
+.mark-annotation-element::before {
+  content: attr(data-name);
+  width: 4px;
+  height: 12px;
+  overflow: visible;
+  word-break: keep-all;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  top: -16px;
+  font-size: 12px;
+  line-height: 12px;
+  transform: scale(0.9);
+  color: var(--color-text-1);
+}
+
+.mark-annotation-element::after {
+  content: " ";
+  width: 4px;
+  display: inline-block;
+}
+
+.mark-annotation-confirm {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mark-annotation-start-mark {
+  display: flex;
+}

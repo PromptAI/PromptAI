@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./bin/startup",
+    "start:docker": "./bin/startup && pm2 log",
+    "stop": "pm2 delete app",
+    "dev": "NODE_ENV=development DEBUG=app:server node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "http-proxy-middleware": "^2.0.6",
+    "js-base64": "^3.7.5",
+    "qs": "^6.11.2"
+  }
+}

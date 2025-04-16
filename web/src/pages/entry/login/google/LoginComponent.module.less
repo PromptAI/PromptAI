@@ -1,0 +1,50 @@
+.googleAuthContainer {
+  position: relative;
+  .originalContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    
+    .googleButton {
+      position: absolute;
+      opacity: 0.01;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      & > div,
+      & > div > div,
+      & > div > div > div {
+        width: 100%;
+      }
+      & > div iframe {
+        position: absolute !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        top: 0 !important;
+        transform: scaleX(1.7);
+        transform-origin: top left;
+      }
+    }
+  }
+}
+.buttonContainer {
+  position: relative;
+  pointer-events: none;
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.buttonIcon {
+  width: 16px;
+  height: 16px;
+}

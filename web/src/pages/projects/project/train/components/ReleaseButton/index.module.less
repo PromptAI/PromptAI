@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  span {
+    margin-top: 8px;
+  }
+  .releasedTime {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+    span {
+      margin-top: 0;
+    }
+  }
+}
+.btn {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background: #a78bfa;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+    user-select: none;
+    pointer-events: none;
+  }
+  .iconContainer {
+    font-size: 2rem;
+    height: fit-content;
+    .placeholder {
+      opacity: 0;
+      .animation(pLoading, 1s, infinite, 1s);
+    }
+    .iconLoading {
+      position: absolute;
+      left: calc(50% - 1rem);
+      .animation(releaseLoading, 1s, infinite, 0s);
+    }
+  }
+}
+.released {
+  background: #0ea5e9;
+}
+.placeholder-loading(@name) {
+  @keyframes @name {
+    to {
+      opacity: 1;
+    }
+  }
+}
+.release-loading(@name) {
+  @keyframes @name {
+    from {
+      top: 1rem;
+    }
+    to {
+      top: -2.25rem;
+    }
+  }
+}
+.release-loading(releaseLoading);
+.placeholder-loading(pLoading);
+.animation(@animation-name,@animation-duration,@animation-timing-function,@animation-delay){
+  animation: @arguments;
+}

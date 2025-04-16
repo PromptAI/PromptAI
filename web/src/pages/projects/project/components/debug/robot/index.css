@@ -1,0 +1,66 @@
+.debug-robot-move {
+  right: 0px;
+  bottom: 24px;
+  width: 0;
+}
+
+.debug-robot-container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.debug-robot-container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.debug-robot-hidden {
+  display: none;
+}
+
+.debug-robot-left {
+  margin-left: 24px;
+}
+
+.debug-robot-right {
+  margin-right: 24px;
+}
+
+.debug-robot-trigger {
+  width: 54px !important;
+  height: 54px !important;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+}
+
+.debug-robot-mask-container {
+  top: 40px;
+  height: calc(100% - 40px);
+}
+
+.debug-robot-mask {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-bg-2);
+}
+
+.debug-robot-error {
+  display: flex;
+  width: 80%;
+  max-height: 128px;
+  line-height: 1.2;
+  padding: 8px;
+  word-wrap: break-word;
+  white-space: break;
+  overflow: hidden;
+  background: rgb(var(--red-1));
+  color: rgb(var(--red-6));
+  border-radius: 8px;
+}
