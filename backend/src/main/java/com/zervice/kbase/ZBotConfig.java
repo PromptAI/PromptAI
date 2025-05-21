@@ -7,7 +7,6 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public class ZBotConfig {
-    public final String DEFAULT_CONFIG_FILE = "/usr/local/zervice/kb/config/application.properties";
 
     /**
      * Sub config objects
@@ -59,10 +58,10 @@ public class ZBotConfig {
      * Email
      */
     public final String EMAIL_SENDER_ADDRESS = "senderAddress";
-    public final String EMAIL_SENDER_ADDRESS_DEFAULT = "notify@promptai.cn";
+    public final String EMAIL_SENDER_ADDRESS_DEFAULT = "";
 
     public final String EMAIL_SENDER_DISPLAY = "senderDisplay";
-    public final String EMAIL_SENDER_DISPLAY_DEFAULT = "Promptai Sys";
+    public final String EMAIL_SENDER_DISPLAY_DEFAULT = "";
 
     public final String EMAIL_SENDER_TYPE = "protocol";
     public final String EMAIL_SENDER_TYPE_DEFAULT = "smtp";
@@ -77,7 +76,7 @@ public class ZBotConfig {
     public final String EMAIL_SMTP_AUTH_PASS_DEFAULT = "";
 
     public final String EMAIL_SMTP_HOST = "smtpHost";
-    public final String EMAIL_SMTP_HOST_DEFAULT = "smtp.zoho.com.cn";
+    public final String EMAIL_SMTP_HOST_DEFAULT = "";
 
     public final String EMAIL_SMTP_PORT = "smtpPort";
     public final int EMAIL_SMTP_PORT_DEFAULT = 25;
@@ -90,34 +89,15 @@ public class ZBotConfig {
 
     public final String EMAIL_CHECK_IDLE_INTERVAL = "emailPollingInterval";
     public final String EMAIL_CHECK_IDLE_INTERVAL_DEFAULT = "5m";
-    /****
-     * Testing DATA
-     */
-    /**
-     * Id and name of the testing account
-     */
-    public static final long TEST_ACCOUNT_ID = 1;
-    public static final String TEST_ACCOUNT_NAME = "testacct";
 
-    public static final long TEST_COLLECTOR_ID = 1;
-    public static final String TEST_COLLECTOR_ACCESS_KEY = "123456";
-
-    public static final String TEST_USER_NAME = "test@promptai.us";
-    public static final String TEST_USER_PASSWORD = "123456";
-    public static final String TEST_USER_APIKEY = "123456";
-    public static final String TEST_TIMEZONE = "America/Los_Angeles";
-    public static final String TEST_ADMIN = "admin";
 
     /**
      * jwt
      * secret
      * 签发者
      */
-    public static final String JWT_SECRET = "EA0vfvy_talk2bits_jws_QEFAASCAT0wggE5Ag";
-    public static final String JWT_PAYLOAD_ISS = "talk2bits.com";
-
-    public static final String KEY_FILE_STORE_PATH = "file.store.path";
-    public static final String DEFAULT_FILE_STORE_PATH = "/usr/local/kb/app/data";
+    public static final String JWT_SECRET = "EAvyTdj0vwCAT0wgfvyEA0vfgE5Ag";
+    public static final String JWT_PAYLOAD_ISS = "your_domain";
 
     public static final String KEY_RSA_KEY = "ras.private_key";
     public static final String DEFAULT_RSA_KEY =

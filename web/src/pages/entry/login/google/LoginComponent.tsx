@@ -5,8 +5,7 @@ import modules from './LoginComponent.module.less';
 import useLocale from '@/utils/useLocale';
 import i18n from '../locale';
 
-const outh_google_client_id =
-  '1014029540131-79opd8dfs2rbqjerhum4k3ot2ugqm2a9.apps.googleusercontent.com';
+const outh_google_client_id ='your_google_id';
 const LoginComponent = () => {
   const t = useLocale(i18n);
   const url = useMemo(
